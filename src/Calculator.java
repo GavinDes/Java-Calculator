@@ -9,26 +9,7 @@ import java.util.Scanner;
 
 public class Calculator 
 {
-
-    public static double add(double value1, double value2)
-    {
-        return value1 + value2;
-    }
-    
-    public static double subtract(double value1, double value2)
-    {
-        return value1 - value2;
-    }
-    
-    public static double multiply(double value1, double value2)
-    {
-        return value1 * value2;
-    }
-    
-    public static double divide(double value1, double value2)
-    {
-        return value1 / value2;
-    }
+    Calculate calculate1 = new Calculate();
     public static void main(String[] args) 
     {
         while(true){
@@ -40,16 +21,16 @@ public class Calculator
             System.out.print("value2\n>: ");
             double value2 = input.nextDouble();
             if(opperation.equals("add")){
-                double solution = add(value1, value2);
+                double solution = Calculate.add(value1, value2);
                 System.out.println(solution);
             }else if(opperation.equals("subtract")){
-                double solution = subtract(value1, value2);
+                double solution = Calculate.subtract(value1, value2);
                 System.out.println(solution);
             }else if(opperation.equals("multiply")){
-                double solution = multiply(value1, value2);
+                double solution = Calculate.multiply(value1, value2);
                 System.out.println(solution);
             }else if(opperation.equals("divide")){
-                double solution = divide(value1, value2);
+                double solution = Calculate.divide(value1, value2);
                 System.out.println(solution);
             }else{
                 System.out.printf("no %s opperation\n", opperation);
